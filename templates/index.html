@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Symbol</th>
+                <th scope="col">Name</th>
+                <th scope="col">Shares</th>
+                <th scope="col">Price</th>
+                <th scope="col">Total</th>
+            </tr>
+        </thead>
+
+        {% for row in rows %}
+            <tr>
+                <td>{{ row["symbol"] }}</td>
+                <td>{{ row["name"] }}</td>
+                <td>{{ row["shares"] }}</td>
+                <td>{{ row["price"] }}</td>
+                <td>{{ row["total"] }}</td>
+
+            </tr>
+        {% endfor %}
+
+
+    </table>
+    <div style="float:right; font-weight:bold;">
+        <label>Cash  : {{ cash }}</label>
+        <label name="cash"></label>
+        <br>
+        <label>TOTAL : {{ fortune }}</label>
+        <label name="total"></label>
+    </div>
+
+{% endblock %}
