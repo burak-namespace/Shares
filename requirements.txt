@@ -1,4 +1,10 @@
+os
 cs50
 Flask
 Flask-Session
 requests
+tempfile
+werkzeug.exceptions
+werkzeug.security
+urllib.parse
+functools
